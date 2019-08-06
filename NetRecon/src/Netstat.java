@@ -1,4 +1,4 @@
-import com.kanishka.virustotal.dto.FileScanReport;
+﻿import com.kanishka.virustotal.dto.FileScanReport;
 import com.kanishka.virustotal.dto.ScanInfo;
 import com.kanishka.virustotal.dto.VirusScanInfo;
 import com.kanishka.virustotal.exception.APIKeyNotFoundException;
@@ -25,7 +25,7 @@ public class Netstat {
 
     public static void scanFile(String filepath) {
         try {
-            VirusTotalConfig.getConfigInstance().setVirusTotalAPIKey("4a6771bbd7ad6f48b67f23da8896f59478ea52713fc0a1c37b458854b6334408");
+            VirusTotalConfig.getConfigInstance().setVirusTotalAPIKey("YOUR_VIRUSTOTAL_API_KEY");
             VirustotalPublicV2 virusTotalRef = new VirustotalPublicV2Impl();
 
 
@@ -65,7 +65,7 @@ public class Netstat {
 
     public static void getFileScanReport(String resource) {
         try {
-            VirusTotalConfig.getConfigInstance().setVirusTotalAPIKey("4a6771bbd7ad6f48b67f23da8896f59478ea52713fc0a1c37b458854b6334408");
+            VirusTotalConfig.getConfigInstance().setVirusTotalAPIKey("YOUR_VIRUSTOTAL_API_KEY");
             VirustotalPublicV2 virusTotalRef = new VirustotalPublicV2Impl();
 
             //String resource="275a021bbfb6489e54d471899f7db9d1663fc695ec2fe2a2c4538aabf651fd0f";
@@ -108,7 +108,7 @@ public class Netstat {
     public static void  main(String args[])
     {
 
-        IPInfo ipInfo = IPInfo.builder().setToken("1700e29937cccc").setCache(new SimpleCache(Duration.ofDays(5))).build();
+        IPInfo ipInfo = IPInfo.builder().setToken("YOUR_IPINFO_TOKEN").setCache(new SimpleCache(Duration.ofDays(5))).build();
 
 
 
@@ -125,7 +125,7 @@ public class Netstat {
             //runPowershell(command);
 
 
-            InetAddress address = InetAddress.getByName("DESKTOP-USQN909");
+            InetAddress address = InetAddress.getByName("YOUR_PC_NAME");
             System.out.println(address.getHostAddress());
 
             Process process = Runtime.getRuntime().exec(cmd);
